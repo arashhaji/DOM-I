@@ -55,6 +55,12 @@ navBar.querySelectorAll("a")[3].textContent = siteContent["nav"]["nav-item-4"];
 navBar.querySelectorAll("a")[4].textContent = siteContent["nav"]["nav-item-5"];
 navBar.querySelectorAll("a")[5].textContent = siteContent["nav"]["nav-item-6"];
 
+
+let navLinks = document.querySelectorAll("a");
+navLinks.forEach(element => {
+  element.style.color = 'green';
+})
+
 //Cta
 const ctaH1 = document.querySelector("h1");
 ctaH1.innerHTML = siteContent.cta.h1.split(" ").join("<br>")
@@ -92,3 +98,26 @@ contact[2].textContent = (siteContent["contact"]["email"])
 
 const copy = document.querySelector("footer p")
 copy.textContent = (siteContent["footer"]["copyright"])
+
+
+//Added to the Nav
+
+const home = document.createElement('a');
+home.textContent = "Home";
+
+
+const shop = document.createElement('a');
+shop.textContent = "Shop";
+
+
+const newnav = document.querySelector('nav');
+newnav.prepend(home);
+
+
+const newnav2 = document.querySelector('nav');
+newnav2.appendChild(shop);
+
+const navText = document.querySelectorAll('a');
+navText.forEach(element => {
+  element.style.color = 'green'
+});
