@@ -121,3 +121,13 @@ const navText = document.querySelectorAll('a');
 navText.forEach(element => {
   element.style.color = 'green'
 });
+
+// Stretch
+
+const ctaHeading = document.querySelector('.cta-text h1');
+ctaHeading.innerHTML = siteContent["cta"]["h1"].split(' ').join('<br>');
+ctaHeading.style.color = 'green';
+
+button.addEventListener("click", function(event) {
+  button.textContent = "You are Awesome!";
+});
